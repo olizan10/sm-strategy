@@ -130,7 +130,7 @@ binance.websockets.chart(par, intervalo, (symbol, interval, chart) => {
   const volume3 = volumes[volumes.length - 3];
   
   // AQUI FICA A ESTRATEGIA DE COMPRA
-  estrategia = haClose5 < haOpen5 && haClose4 <= haOpen4 && haClose3 <= haOpen3 && haClose2 > haOpen2 && volume2 > volume3;
+  strategy = haClose5 < haOpen5 && haClose4 <= haOpen4 && haClose3 <= haOpen3 && haClose2 > haOpen2 && volume2 > volume3;
 
 });
 
@@ -142,12 +142,12 @@ function comprar(){
 //FUNÇÃO PARA VERIFICAR ESTRATEGIA
 function verificar() {
   
-  if (estrategia === true) {    
+  if (strategy === true) {    
     comprar(); 
 
   } else{  
     console.log("Sem sinal de entrada")
-    console.log(estrategia)
+    console.log(strategy)
   }
 } setInterval(verificar, 16000);
 
