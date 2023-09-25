@@ -148,9 +148,6 @@ function verificar() {
   } else{  
     console.log("Sem sinal de entrada")
     console.log(estrategia)
-    if(estrategia === false){
-        console.log("Sim é examente igual a false ")
-    }
   }
 } setInterval(verificar, 16000);
 
